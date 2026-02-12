@@ -1,0 +1,714 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - EMV Card Studio</title>
+    <style>
+        :root {
+            --primary: #1565C0;
+            --primary-light: #E3F2FD;
+            --text: #212121;
+            --text-secondary: #616161;
+            --border: #E0E0E0;
+            --bg: #FAFAFA;
+            --white: #FFFFFF;
+            --success: #2E7D32;
+            --success-bg: #E8F5E9;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            color: var(--text);
+            background: var(--bg);
+            line-height: 1.7;
+            font-size: 16px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 24px 20px 60px;
+        }
+
+        header {
+            background: var(--primary);
+            color: var(--white);
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 28px;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+
+        header .subtitle {
+            font-size: 16px;
+            opacity: 0.9;
+        }
+
+        .meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 16px;
+            justify-content: center;
+            margin-top: 16px;
+            font-size: 14px;
+            opacity: 0.85;
+        }
+
+        .meta span {
+            background: rgba(255, 255, 255, 0.15);
+            padding: 4px 12px;
+            border-radius: 4px;
+        }
+
+        .key-principles {
+            background: var(--success-bg);
+            border-left: 4px solid var(--success);
+            padding: 20px 24px;
+            margin: 24px 0;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .key-principles h3 {
+            color: var(--success);
+            margin-bottom: 10px;
+            font-size: 16px;
+        }
+
+        .key-principles ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .key-principles li {
+            padding: 4px 0;
+            padding-left: 24px;
+            position: relative;
+        }
+
+        .key-principles li::before {
+            content: "\2713";
+            color: var(--success);
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+
+        h2 {
+            font-size: 22px;
+            color: var(--primary);
+            margin-top: 40px;
+            margin-bottom: 16px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid var(--primary-light);
+        }
+
+        h3 {
+            font-size: 17px;
+            color: var(--text);
+            margin-top: 24px;
+            margin-bottom: 10px;
+        }
+
+        p {
+            margin-bottom: 14px;
+        }
+
+        ul, ol {
+            margin-bottom: 14px;
+            padding-left: 24px;
+        }
+
+        li {
+            margin-bottom: 6px;
+        }
+
+        strong {
+            color: var(--text);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 16px 0;
+            font-size: 15px;
+        }
+
+        th {
+            background: var(--primary);
+            color: var(--white);
+            text-align: left;
+            padding: 10px 14px;
+            font-weight: 600;
+        }
+
+        td {
+            padding: 10px 14px;
+            border-bottom: 1px solid var(--border);
+        }
+
+        tr:nth-child(even) td {
+            background: var(--primary-light);
+        }
+
+        .card {
+            background: var(--white);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 20px 24px;
+            margin: 16px 0;
+        }
+
+        .not-collected {
+            background: #FFF3E0;
+            border-left: 4px solid #E65100;
+            padding: 16px 20px;
+            margin: 16px 0;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .not-collected h3 {
+            color: #E65100;
+            margin-top: 0;
+            margin-bottom: 8px;
+            font-size: 15px;
+        }
+
+        .not-collected ul {
+            margin-bottom: 0;
+        }
+
+        .highlight {
+            background: var(--primary-light);
+            border-left: 4px solid var(--primary);
+            padding: 16px 20px;
+            margin: 16px 0;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .highlight strong {
+            color: var(--primary);
+        }
+
+        .summary-table {
+            margin-top: 16px;
+        }
+
+        code {
+            background: #ECEFF1;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-size: 14px;
+            font-family: 'SF Mono', 'Fira Code', 'Fira Mono', 'Roboto Mono', monospace;
+        }
+
+        a {
+            color: var(--primary);
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        footer {
+            text-align: center;
+            padding: 32px 20px;
+            color: var(--text-secondary);
+            font-size: 14px;
+            border-top: 1px solid var(--border);
+            margin-top: 40px;
+        }
+
+        footer p {
+            margin-bottom: 6px;
+        }
+
+        .commitment {
+            background: var(--primary);
+            color: var(--white);
+            text-align: center;
+            padding: 32px 24px;
+            border-radius: 8px;
+            margin: 32px 0;
+        }
+
+        .commitment p {
+            font-size: 18px;
+            margin-bottom: 0;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 16px 14px 40px;
+            }
+
+            header {
+                padding: 28px 16px;
+            }
+
+            header h1 {
+                font-size: 22px;
+            }
+
+            h2 {
+                font-size: 19px;
+            }
+
+            .meta {
+                flex-direction: column;
+                align-items: center;
+                gap: 8px;
+            }
+
+            table {
+                font-size: 13px;
+            }
+
+            th, td {
+                padding: 8px 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Privacy Policy</h1>
+    <p class="subtitle">EMV Card Studio</p>
+    <div class="meta">
+        <span>Effective: February 12, 2026</span>
+        <span>Developer: Kemet Soft</span>
+        <span>Version: 1.0.0</span>
+    </div>
+</header>
+
+<div class="container">
+
+    <!-- 1. Introduction -->
+    <h2>1. Introduction</h2>
+
+    <p>EMV Card Studio ("the App") is developed by Kemet Soft ("we", "us", "our"). This Privacy Policy explains how information is handled when you use our App.</p>
+
+    <p>EMV Card Studio is an educational and professional tool for reading and analyzing EMV contactless payment cards via NFC technology. The App is designed to operate entirely offline with no data leaving your device.</p>
+
+    <div class="key-principles">
+        <h3>Key Principles</h3>
+        <ul>
+            <li>All data is stored locally on your device only</li>
+            <li>The App has no internet connectivity</li>
+            <li>We do not collect, transmit, or share any user data</li>
+            <li>You have complete control over your data at all times</li>
+        </ul>
+    </div>
+
+    <!-- 2. Information Stored -->
+    <h2>2. Information Stored on Your Device</h2>
+
+    <h3>2.1 Card Data</h3>
+
+    <p>When you scan an EMV payment card, the App reads and stores the following information locally on your device:</p>
+
+    <div class="card">
+        <strong>Card Information:</strong>
+        <ul>
+            <li>Primary Account Number (PAN)</li>
+            <li>Expiration date</li>
+            <li>Cardholder name (if present on card)</li>
+            <li>Card type (Visa, Mastercard, Amex, etc.)</li>
+            <li>Application Identifiers (AIDs)</li>
+        </ul>
+
+        <strong>Technical Data:</strong>
+        <ul>
+            <li>APDU commands and responses exchanged with the card</li>
+            <li>EMV tag-value pairs (TLV data)</li>
+            <li>Application Transaction Counter (ATC)</li>
+            <li>Card verification results</li>
+            <li>Application File Locator data</li>
+        </ul>
+    </div>
+
+    <p><strong>Storage:</strong> All card data is stored in an encrypted database on your device using SQLCipher with AES-256 encryption.</p>
+
+    <div class="not-collected">
+        <h3>2.2 Data NOT Collected</h3>
+        <p>The App does not and cannot access:</p>
+        <ul>
+            <li>CVV/CVC security code (not accessible via contactless NFC)</li>
+            <li>PIN (not accessible via contactless NFC)</li>
+            <li>Full magnetic stripe track data</li>
+            <li>Sensitive Authentication Data (SAD) as defined by PCI-DSS</li>
+        </ul>
+    </div>
+
+    <h3>2.3 App Preferences</h3>
+
+    <p>The App stores your preferences locally on your device:</p>
+    <ul>
+        <li>PAN masking level setting</li>
+        <li>Biometric authentication preference</li>
+        <li>Screenshot protection preference</li>
+        <li>Duplicate card handling preference</li>
+        <li>Clipboard auto-clear preference</li>
+        <li>In-app search history</li>
+    </ul>
+
+    <div class="not-collected">
+        <h3>2.4 Data We Do NOT Collect</h3>
+        <p>We do not collect any of the following:</p>
+        <ul>
+            <li>Personal information (email, phone number, address)</li>
+            <li>Location data</li>
+            <li>Device identifiers (IMEI, Android ID, advertising ID)</li>
+            <li>Usage analytics or telemetry</li>
+            <li>Crash reports</li>
+            <li>Contacts, photos, or media</li>
+        </ul>
+    </div>
+
+    <!-- 3. How Data is Used -->
+    <h2>3. How Your Data is Used</h2>
+
+    <p>Data stored on your device is used solely to provide the App's core functionality:</p>
+    <ul>
+        <li>Display card information within the App</li>
+        <li>Visualize APDU command/response exchanges</li>
+        <li>Compare data across multiple scanned cards</li>
+        <li>Search and organize your scanned cards</li>
+        <li>Generate export files for your personal use</li>
+        <li>Show charts and statistics about your scanned cards</li>
+    </ul>
+
+    <p>Your data is never used for analytics, advertising, profiling, or any purpose beyond the features described above.</p>
+
+    <!-- 4. Data Storage and Security -->
+    <h2>4. Data Storage and Security</h2>
+
+    <h3>4.1 Encryption</h3>
+
+    <div class="card">
+        <strong>Database Encryption:</strong>
+        <ul>
+            <li>Algorithm: AES-256 via SQLCipher 4.13.0</li>
+            <li>Passphrase: 256-bit randomly generated, stored in Android EncryptedSharedPreferences</li>
+            <li>Protection: Android application sandbox with optional biometric authentication</li>
+        </ul>
+
+        <strong>Runtime Encryption:</strong>
+        <ul>
+            <li>Algorithm: AES-256-GCM via Android Keystore</li>
+            <li>Key storage: Hardware-backed when available (Trusted Execution Environment / Secure Element)</li>
+        </ul>
+    </div>
+
+    <h3>4.2 Additional Security Measures</h3>
+    <ul>
+        <li><strong>PAN Masking:</strong> Four configurable levels (Full display, Last 4 digits, First 6 + Last 4, Fully masked)</li>
+        <li><strong>Biometric Authentication:</strong> Optional fingerprint or face unlock to access the App</li>
+        <li><strong>Screenshot Protection:</strong> FLAG_SECURE prevents screen capture on sensitive screens</li>
+        <li><strong>Clipboard Security:</strong> Automatic clipboard clearing after 30 seconds</li>
+        <li><strong>Code Obfuscation:</strong> ProGuard/R8 enabled for release builds</li>
+    </ul>
+
+    <h3>4.3 No Data Transmission</h3>
+
+    <div class="highlight">
+        <p><strong>The App does not transmit any data over the internet or any other network:</strong></p>
+        <ul>
+            <li>No INTERNET permission is declared in the App</li>
+            <li>No HTTP/HTTPS libraries are included</li>
+            <li>No backend servers or APIs exist</li>
+            <li>No cloud storage or synchronization</li>
+            <li>The App functions entirely offline</li>
+        </ul>
+    </div>
+
+    <p>NFC communication occurs only between your device and a physical card held within 4 cm range, using the ISO 14443-4 protocol. This is a local, short-range communication and does not involve the internet.</p>
+
+    <h3>4.4 Backups</h3>
+
+    <p>Cloud backups are disabled (<code>android:allowBackup="false"</code>) to prevent sensitive data from being included in Android system backups or Google Drive auto-backup.</p>
+
+    <p>You may optionally export card data to a password-encrypted file stored at a location of your choosing. Exported files are under your control.</p>
+
+    <!-- 5. Data Sharing -->
+    <h2>5. Data Sharing</h2>
+
+    <div class="highlight">
+        <p><strong>We do not share your data. We do not have access to your data.</strong></p>
+    </div>
+
+    <ul>
+        <li>No data is sent to Kemet Soft or any third party</li>
+        <li>No analytics providers are used (no Google Analytics, Firebase, etc.)</li>
+        <li>No advertising networks are integrated</li>
+        <li>No social media services are connected</li>
+        <li>No backend servers receive your data</li>
+    </ul>
+
+    <p>Since all data remains on your device and we have no means to access it, we cannot provide your data to anyone, including in response to legal requests.</p>
+
+    <!-- 6. Third-Party Libraries -->
+    <h2>6. Third-Party Libraries</h2>
+
+    <p>The App uses the following open-source libraries for technical functionality:</p>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Library</th>
+                <th>Purpose</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>SQLCipher</td>
+                <td>Database encryption (AES-256)</td>
+            </tr>
+            <tr>
+                <td>BouncyCastle</td>
+                <td>Cryptographic operations</td>
+            </tr>
+            <tr>
+                <td>AndroidX</td>
+                <td>UI components and framework utilities</td>
+            </tr>
+            <tr>
+                <td>MPAndroidChart</td>
+                <td>Data visualization and charts</td>
+            </tr>
+            <tr>
+                <td>BER-TLV</td>
+                <td>EMV tag-length-value data parsing</td>
+            </tr>
+            <tr>
+                <td>EMV-NFC-Paycard-Enrollment</td>
+                <td>EMV data structure parsing</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <p><strong>None of these libraries collect, transmit, or share your data.</strong> They are used exclusively for local, on-device processing.</p>
+
+    <!-- 7. Your Rights and Control -->
+    <h2>7. Your Rights and Control</h2>
+
+    <h3>7.1 Access</h3>
+    <p>You have complete access to all data stored by the App through its interface. You can view, search, and browse all scanned cards and their associated data at any time.</p>
+
+    <h3>7.2 Deletion</h3>
+    <p>You can delete your data at any time using the following methods:</p>
+    <ul>
+        <li><strong>Delete individual cards:</strong> Long-press a card and select Delete</li>
+        <li><strong>Clear all data:</strong> Settings &gt; Clear All Data</li>
+        <li><strong>Uninstall the App:</strong> Removes all App data from your device</li>
+    </ul>
+    <p>Deletion is immediate and permanent. No data is retained after deletion.</p>
+
+    <h3>7.3 Data Portability</h3>
+    <p>You can export your data for personal use:</p>
+    <ul>
+        <li>Export to encrypted JSON files</li>
+        <li>Export to HTML reports</li>
+        <li>Files are saved to a location you choose and are under your control</li>
+    </ul>
+
+    <h3>7.4 Modification</h3>
+    <p>You can edit card metadata including categories, favorites, titles, and descriptions within the App.</p>
+
+    <!-- 8. Permissions -->
+    <h2>8. Permissions</h2>
+
+    <p>The App requests the following Android permissions:</p>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Permission</th>
+                <th>Purpose</th>
+                <th>Required</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><code>NFC</code></td>
+                <td>Read EMV card data via Near Field Communication</td>
+                <td>Yes (core functionality)</td>
+            </tr>
+            <tr>
+                <td><code>VIBRATE</code></td>
+                <td>Provide haptic feedback when a card is detected</td>
+                <td>Yes (user experience)</td>
+            </tr>
+            <tr>
+                <td><code>USE_BIOMETRIC</code></td>
+                <td>Optional biometric authentication for App access</td>
+                <td>No (user choice)</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <p>All permissions are "normal" permissions granted automatically at install time. No runtime permission prompts are required.</p>
+
+    <!-- 9. Children's Privacy -->
+    <h2>9. Children's Privacy</h2>
+
+    <p>EMV Card Studio is not designed for or directed at children under the age of 13. We do not knowingly store data from children. The App is an educational and professional tool intended for developers, security researchers, and payment system professionals.</p>
+
+    <!-- 10. Data Retention -->
+    <h2>10. Data Retention</h2>
+
+    <p>All data is retained on your device until you choose to delete it. There is no automatic deletion and no server-side retention. You are the sole controller of your data and its lifecycle.</p>
+
+    <!-- 11. International Users -->
+    <h2>11. International Users</h2>
+
+    <p>Your data is stored on your device, in your physical location. No cross-border data transfer occurs because no data leaves your device.</p>
+
+    <h3>Regional Compliance</h3>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Regulation</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>GDPR (European Union)</td>
+                <td>Compliant &mdash; no data processing by developer; user is the data controller</td>
+            </tr>
+            <tr>
+                <td>CCPA (California, USA)</td>
+                <td>Compliant &mdash; no data sale or sharing</td>
+            </tr>
+            <tr>
+                <td>PIPEDA (Canada)</td>
+                <td>Compliant &mdash; no personal information collection</td>
+            </tr>
+            <tr>
+                <td>LGPD (Brazil)</td>
+                <td>Compliant &mdash; no data processing</td>
+            </tr>
+            <tr>
+                <td>PDPA (Singapore/Thailand)</td>
+                <td>Compliant &mdash; no data transfer</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h3>GDPR Rights (EU Users)</h3>
+    <ul>
+        <li><strong>Right to access:</strong> View all data in the App</li>
+        <li><strong>Right to rectification:</strong> Edit card metadata</li>
+        <li><strong>Right to erasure:</strong> Delete individual cards or all data</li>
+        <li><strong>Right to data portability:</strong> Export to JSON/HTML</li>
+        <li><strong>Right to object:</strong> Stop using the App at any time</li>
+        <li><strong>Right to restrict processing:</strong> Delete specific cards</li>
+    </ul>
+
+    <!-- 12. Changes -->
+    <h2>12. Changes to This Privacy Policy</h2>
+
+    <p>We may update this Privacy Policy to reflect changes in legal requirements, App features, or security practices. Material changes will be communicated through:</p>
+    <ul>
+        <li>Updated effective date at the top of this document</li>
+        <li>In-app notification for significant changes</li>
+        <li>Updated version in the App's About section</li>
+    </ul>
+
+    <p>Continued use of the App after changes constitutes acceptance of the updated policy.</p>
+
+    <!-- 13. Contact -->
+    <h2>13. Contact Information</h2>
+
+    <div class="card">
+        <p><strong>Developer:</strong> Kemet Soft</p>
+        <p><strong>GitHub:</strong> <a href="https://github.com/masrico76/emv-card-studio">https://github.com/masrico76/emv-card-studio</a></p>
+        <p><strong>Issues:</strong> <a href="https://github.com/masrico76/emv-card-studio/issues">https://github.com/masrico76/emv-card-studio/issues</a></p>
+    </div>
+
+    <p>For privacy-related questions or concerns, please open an issue on our GitHub repository or contact us through the channels listed above.</p>
+
+    <p>Note: Because we do not have access to any user data, we cannot fulfill data access or deletion requests on your behalf. All data management is performed directly by you through the App.</p>
+
+    <!-- 14. Summary -->
+    <h2>14. Summary</h2>
+
+    <table class="summary-table">
+        <thead>
+            <tr>
+                <th>Aspect</th>
+                <th>Detail</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Data stored</td>
+                <td>Locally on your device only</td>
+            </tr>
+            <tr>
+                <td>Encryption</td>
+                <td>AES-256 (SQLCipher)</td>
+            </tr>
+            <tr>
+                <td>Internet access</td>
+                <td>None</td>
+            </tr>
+            <tr>
+                <td>Data transmission</td>
+                <td>None</td>
+            </tr>
+            <tr>
+                <td>Data sharing</td>
+                <td>None</td>
+            </tr>
+            <tr>
+                <td>Analytics / Tracking</td>
+                <td>None</td>
+            </tr>
+            <tr>
+                <td>Advertisements</td>
+                <td>None</td>
+            </tr>
+            <tr>
+                <td>Cloud backup</td>
+                <td>Disabled</td>
+            </tr>
+            <tr>
+                <td>User control</td>
+                <td>Full &mdash; view, export, delete anytime</td>
+            </tr>
+            <tr>
+                <td>Open source</td>
+                <td>Yes (MIT license)</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="commitment">
+        <p>Your financial data belongs to you. EMV Card Studio is built from the ground up to keep your data private, secure, and entirely under your control.</p>
+    </div>
+
+</div>
+
+<footer>
+    <p><strong>Effective Date:</strong> February 12, 2026</p>
+    <p><strong>Policy Version:</strong> 1.0.0 &bull; <strong>App Version:</strong> 1.0.0</p>
+    <p>&copy; 2026 Kemet Soft. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
